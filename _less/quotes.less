@@ -1,0 +1,76 @@
+// main: ../style.less
+.quote {
+  background: black;
+  color: white;
+
+  p {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  p.source {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 14px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+
+  span {
+    font-size: 100px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 68px;
+    background: transparent;
+    margin: 0 0 0 -5px;
+    top: 48px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+  }
+
+  a i {
+    color: white;
+    opacity: 0.5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  }
+
+  a:hover i {
+    opacity: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+}
+
+.quote#quote-reck {
+  background: #fbc02d;
+}
+
+.quote.twitter {
+  background: #55acee;
+}
+
+@media (min-width: @screen-md) {
+  .quote {
+    p {
+      font-size: 42px;
+      line-height: 54px;
+      margin-top: 60px;
+    }
+
+    p.source {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    span {
+      font-size: 150px;
+      line-height: 102px;
+      margin: 0 0 0 -6px;
+    }
+  }
+}

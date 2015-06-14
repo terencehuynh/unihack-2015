@@ -1,0 +1,226 @@
+// main: ../style.less
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fafafa;
+  position: relative;
+  height: 100%;
+}
+
+.clearfix {
+  .clearfix();
+}
+
+/* Footer */
+.footer {
+  background: #263238;
+  height: 160px;
+  padding: 20px 0;
+
+  .wired-logo {
+    margin: 6px auto 30px;
+    width: @wired_nav_logo_width;
+    height: @wired_nav_logo_height;
+    display: block;
+  }
+
+  p {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6C7A89;
+    margin: 0 0 6px;
+    text-align: center;
+
+    &.logo {
+      color: white;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer, #global-nav {
+  a.wired-logo {
+    span {
+      text-indent: -999em;
+      background-image: url(@wired_logo);
+      width: @wired_nav_logo_width;
+      height: @wired_nav_logo_height;
+      background-size: @wired_nav_logo_width @wired_nav_logo_height;
+      background-repeat: no-repeat;
+      display: block;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .footer, #global-nav {
+    a.wired-logo span {
+      background-image: url(@wired_logo_retina);
+      background-size: @wired_nav_logo_width @wired_nav_logo_height;
+    }
+  }
+}
+
+/* Subscribe */
+#mc-embedded-subscribe-form {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  margin-top: 36px;
+
+  .mc-field-group {
+    float: left;
+    width: 79%;
+    height: 50px;
+
+    input {
+      width: 100%;
+      height: 50px;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 18px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .mc-button {
+    float: right;
+    width: 20%;
+    height: 50px;
+
+    input {
+      width: 100%;
+      height: 50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  #mc-embedded-subscribe-form {
+    height: 36px;
+    width: auto;
+
+    .mc-field-group, .mc-field-group input,
+    .mc-button, .mc-button input {
+      height: 36px;
+    }
+
+    .mc-field-group {
+      width: 69%;
+    }
+
+    .mc-button {
+      width: 30%;
+    }
+  }
+}
+
+.modal-backdrop {
+  background: #fafafa;
+}
+
+.modal-backdrop.in {
+  opacity: 0.80;
+  filter: alpha(opacity=80);
+}
+
+.modal-content {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+
+  h4 {
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: 400;
+    color: #1d1d1d;
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+
+  a {
+    color: #428bca;
+    text-decoration: none;
+  }
+
+  a.btn {
+    color: white;
+    display: block;
+    font-size: 16px;
+  }
+
+  a.btn + a.btn {
+    margin: 10px 0 0;
+  }
+
+  a.btn.close {
+    color: #969696;
+    border: 1px solid #ddd;
+  }
+
+  a.btn i {
+    margin-right: 6px;
+  }
+
+  .modal-footer {
+    text-align: left;
+  }
+
+  img.logo-head {
+    width: 100%;
+  }
+
+  .cba-image {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+  }
+
+}
+
+@media (min-width: @screen-sm) {
+  .modal-content {
+    -webkit-box-shadow: 0 0px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 30px rgba(0,0,0,0.3);
+
+    a.btn {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    a.btn + a.btn {
+      margin: 0;
+    }
+
+    a.btn.close {
+      float: right;
+    }
+  }
+
+}

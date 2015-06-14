@@ -1,0 +1,274 @@
+// main: ../style.less
+
+.slide {
+  position: relative;
+  background: #fafafa;
+
+  .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .row > div {
+      box-sizing: border-box;
+    }
+  }
+
+  h2 {
+    font-size: 42px;
+    letter-spacing: -1px;
+    font-weight: 300;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0 0 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+    color: #1d1d1d;
+  }
+
+  a {
+    color: #2980b9;
+    text-decoration: none;
+
+    &:hover {
+      color: #95a5a6;
+    }
+  }
+
+  p.first {
+    font-size: 28px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: @screen-md-min) {
+  .slide {
+    min-height: 100px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    h3, p {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    p.first {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media (min-width: @screen-md) {
+  .slide#info, .slide#faq {
+    .row > .col-md-6:first-child {
+      padding-right: 45px;
+    }
+
+    .col-md-6 + .col-md-6 {
+      padding-left: 45px;
+      padding-right: 15px;
+    }
+  }
+}
+
+/* Front Cover */
+
+.slide#home {
+  // background: #1d1d1d url(img/unihack-home-bg.jpg) center center no-repeat;
+  // background-size: cover;
+
+  background: #181818 url(img/homepage-bg.jpg) top left no-repeat;
+  background-size: 800px auto;
+
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -1px;
+    color: white;
+    font-weight: 300;
+    text-transform: none;
+
+    span {
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+  }
+
+  .btn:hover {
+    background: white;
+    color: #181818;
+  }
+
+  .c-inner {
+    width: 100vw;
+    max-width: 100%;
+    height: 90vh;
+    display: table-cell;
+    vertical-align: bottom;
+    // background: rgba(0,0,0,0.5);
+  }
+}
+
+@media (min-width: @screen-sm) {
+  .slide#home {
+    text-align: center;
+    background-size: 1000px auto;
+  }
+}
+
+@media (min-width: @screen-md) {
+  .slide#home {
+    text-align: center;
+    background-color: #1d1d1d;
+    background-size: cover;
+
+    h2 {
+      font-size: 64px;
+      line-height: 72px;
+    }
+
+    p {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+}
+
+/* Contact */
+
+.slide#contact {
+  text-align: center;
+  background: #455a64;
+
+  h2, p, a {
+    color: white;
+  }
+
+  p.first {
+    margin-bottom: 28px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: 21px;
+      margin-bottom: 28px;
+      color: white;
+      font-weight: 300;
+
+      span {
+        display: block;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/* Info */
+
+.slide#info {
+  border-top: 1px solid #424242;
+  background: #1d1d1d;
+  padding-bottom: 0;
+
+  .rsb {
+    height: 500px;
+  }
+
+  p {
+    color: white;
+  }
+
+  p.first {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  .event-details {
+
+    h3 {
+      color: #80d8ff;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 3px;
+      text-transform: uppercase;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+    p {
+      color: #969696;
+    }
+
+    p.time, p.venue {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    p.venue {
+      margin-bottom: 6px;
+    }
+
+    p.address {
+      font-size: 18px;
+      line-height: 28px;
+      color: white
+    }
+
+  }
+
+}
+
+/* Prize and Timetable - Centered */
+.slide#prizes, .slide#schedule .container > p {
+  text-align: center;
+}
+
+/* FAQs */
+
+.slide#faq {
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 21px;
+  }
+}
