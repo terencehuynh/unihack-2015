@@ -1,59 +1,213 @@
 // main: ../style.less
-.slide#prizes {
 
-  h3 {
-    font-size: 21px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 36px;
-    margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+.slide#major-prize {
+  background: #1d1d1d;
+
+  h2 {
+    font-size: 42px;
+    line-height: 42px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 12px;
   }
 
-  p {
-    margin: 0;
-    margin-bottom: 8px;
+  p.highlight {
     font-size: 18px;
-    line-height: 28px;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  p.prize {
-    font-size: 36px;
-    font-weight: 300;
-    font-family: 'Titillium Web', sans-serif;
-    color: #969696;
-    line-height: 36px;
-    margin-bottom: 36px;
+  .prize {
+
+    .inner {
+      padding: 30px 16px;
+      text-align: center;
+
+      span.trophy {
+        font-size: 100px;
+        margin-bottom: 2px;
+        color: #212121;
+      }
+
+      h3 {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #212121;
+        margin-bottom: 4px;
+        line-height: 24px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 12px;
+        color: #212121;
+      }
+
+      p:last-child {
+        margin: 0;
+      }
+    }
+
+    .gold {
+
+      .inner {
+        background: #ffc107;
+        padding: 30px 16px;
+      }
+
+      h3 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 21px;
+        line-height: 24px;
+      }
+    }
+
+    .silver {
+      .inner {
+        background: #e0e0e0;
+      }
+    }
+
+    .bronze {
+      .inner {
+        background: #6d4c41;
+      }
+      h3, p {
+        color: white;
+      }
+    }
   }
 
-  .minor {
-
-    opacity: 0.4;
+  .criteria {
+    padding-top: 36px;
+    border-top: 1px solid #444444;
+    margin-bottom: 48px;
 
     h3 {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      color: white;
+      margin-top: 12px;
+      margin-bottom: 8px;
       font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
     }
 
     p {
-      font-size: 16px;
-      margin-bottom: 4px;
+      font-size: 14px;
+      color: #757575;
+      line-height: 28px;
+      margin: 0 0 18px;
+      font-weight: 400;
     }
 
-    p.prize {
-      font-size: 24px;
-      line-height: 24px;
-      margin-bottom: 36px;
+    p:last-child {
+      margin: 0;
     }
   }
 }
 
+.slide#prizes {
+  background: #424242;
+
+
+  div.card {
+    border: 1px solid #666;
+    margin-bottom: 30px;
+    padding: 24px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 21px;
+    color: white;
+    margin: 0 0 16px;
+    font-family: 'Titillium Web', sans-serif;
+
+    span {
+      display: block;
+      font-size: 16px;
+      margin-top: 4px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+
+  p.brief {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  p.prize {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+  }
+
+}
+
 @media (min-width: @screen-sm) {
   .slide#prizes {
-    .row.second {
-      margin: 0;
-      margin-bottom: 36px;
-      border-bottom: 1px solid #d0d0d0;
+  }
+
+  .slide#major-prize {
+
+    h2 {
+      font-size: 72px;
+      line-height: 72px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    p.highlight {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 42px;
+      text-align: center;
+    }
+
+    .gold {
+      background: #ffc107;
+    }
+
+    .silver {
+      background: #e0e0e0;
+
+      .inner {
+        padding: 30px 16px 100px;
+      }
+    }
+
+    .bronze {
+      background: #6d4c41;
     }
   }
 }

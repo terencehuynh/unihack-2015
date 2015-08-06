@@ -77,4 +77,10 @@ $(function() {
   $('#accordion').on('show.bs.collapse', function () {
     if (active) $('#accordion .in').collapse('hide');
   });
+
+  $("#countdown").countdown("2015/08/15",  function(event) {
+    $(this).text(
+      event.strftime('%D days %H hours %M minutes %S seconds')
+    );
+  });
 });
